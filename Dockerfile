@@ -18,3 +18,7 @@ CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:10000", "--workers", "4", "--time
 
 # Adicione esta linha para instalar dependências do sistema
 RUN apt-get update && apt-get install -y python3-dev libgomp1 && rm -rf /var/lib/apt/lists/*
+
+# Adicione estas linhas:
+RUN mkdir -p /tmp/uploads
+RUN chmod 777 /tmp/uploads
