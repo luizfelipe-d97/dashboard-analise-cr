@@ -5,3 +5,4 @@ numpy==1.23.5
 openpyxl==3.0.10
 gunicorn==20.1.0
 setuptools==65.5.1
+tables==3.8.0  # Para melhor performance com pandas
