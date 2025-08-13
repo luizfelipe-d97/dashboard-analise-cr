@@ -2,10 +2,8 @@ services:
   - type: web
     name: dash-analise-cr
     runtime: python
+    pythonVersion: "3.9.13"
     buildCommand: |
+      pip install --upgrade pip
       pip install -r requirements.txt
-    startCommand: |
-      gunicorn app:app --workers 2 --timeout 300
-    envVars:
-      - key: PYTHONUNBUFFERED
-        value: 1
+    startCommand: gunicorn app:app --workers 2 --timeout 300
